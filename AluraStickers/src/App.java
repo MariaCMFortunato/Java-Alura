@@ -29,9 +29,16 @@ public class App {
         JsonParser parser = new JsonParser();
         //OU: var parser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
-        System.out.println(listaDeFilmes.size());
+        /*System.out.println(listaDeFilmes.size());
+        System.out.println(listaDeFilmes.get(0));*/
         /*Exibir e manipular os dados */
-
+        //criar um foreach - mas foreach não eiste no java, este foreach é um template
+        for (Map<String, String> filme : listaDeFilmes) { //cada filme é um mapa
+            System.out.println(filme.get("title"));
+            System.out.println(filme.get("image"));
+            System.out.println(filme.get("imDbRating"));
+            System.out.println();
+        }
 
     }
 }
